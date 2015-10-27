@@ -1,0 +1,128 @@
+@mixin clearfix {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+@mixin border-radius ($radius: 5px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin transition ($prop: all, $time: 400ms, $ease: ease) {
+    -webkit-transition: $prop $time $ease;
+    -moz-transition: $prop $time $ease;
+    -o-transition: $prop $time $ease;
+    -ms-transition: $prop $time $ease;
+    transition: $prop $time $ease;
+}
+@mixin pad-inner {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+@mixin gradient ($origin: top, $start: #fcfcfc, $stop: #ededed) {
+    background-color: $start;
+    background-image: -webkit-linear-gradient($origin, $start, $stop);
+    background-image: -moz-linear-gradient($origin, $start, $stop);
+    background-image: -o-linear-gradient($origin, $start, $stop);
+    background-image: -ms-linear-gradient($origin, $start, $stop);
+    background-image: linear-gradient($origin, $start, $stop);
+}
+@mixin ie9 {
+    .gradient ($ieorigin: top, $iestart: #fcfcfc, $iestop: #ededed) {
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$iestart, endColorstr=$iestop,GradientType=0 );
+    }
+}
+
+@mixin drop-shadow ($inset: '', $x: 0, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+    -webkit-box-shadow: $inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+    -moz-box-shadow:    $inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+    box-shadow:     $inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+
+@mixin border-radiuses ($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
+    -webkit-border-top-right-radius:    $topright;
+    -webkit-border-bottom-right-radius: $bottomright;
+    -webkit-border-bottom-left-radius:  $bottomleft;
+    -webkit-border-top-left-radius:     $topleft;
+
+    -moz-border-radius-topright:        $topright;
+    -moz-border-radius-bottomright:     $bottomright;
+    -moz-border-radius-bottomleft:      $bottomleft;
+    -moz-border-radius-topleft:         $topleft;
+
+    border-top-right-radius:            $topright;
+    border-bottom-right-radius:         $bottomright;
+    border-bottom-left-radius:          $bottomleft;
+    border-top-left-radius:             $topleft;
+
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+
+@mixin opacity ($opacity) {
+    -webkit-opacity:    $opacity;
+    -moz-opacity:       $opacity;
+    opacity:        $opacity;
+}
+
+@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
+    -webkit-animation: $name $duration $delay $ease;
+    -moz-animation:    $name $duration $delay $ease;
+    -ms-animation:     $name $duration $delay $ease;
+}
+
+@mixin transform($string){
+    -webkit-transform: $string;
+    -moz-transform:      $string;
+    -ms-transform:       $string;
+    -o-transform:        $string;
+}
+@mixin scale ($factor) {
+    -webkit-transform: scale($factor);
+    -moz-transform:      scale($factor);
+    -ms-transform:       scale($factor);
+    -o-transform:        scale($factor);
+}
+@mixin rotate ($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform:      rotate($deg);
+    -ms-transform:       rotate($deg);
+    -o-transform:        rotate($deg);
+}
+@mixin skew ($deg, $deg2) {
+    -webkit-transform:       skew($deg, $deg2);
+    -moz-transform:      skew($deg, $deg2);
+    -ms-transform:       skew($deg, $deg2);
+    -o-transform:        skew($deg, $deg2);
+}
+@mixin translate ($x, $y:0) {
+    -webkit-transform:       translate($x, $y);
+    -moz-transform:      translate($x, $y);
+    -ms-transform:       translate($x, $y);
+    -o-transform:        translate($x, $y);
+}
+@mixin translate3d ($x, $y: 0, $z: 0) {
+    -webkit-transform:       translate3d($x, $y, $z);
+    -moz-transform:      translate3d($x, $y, $z);
+    -ms-transform:       translate3d($x, $y, $z);
+    -o-transform:        translate3d($x, $y, $z);
+}
+
+@mixin perspective ($value: 1000) {
+    -webkit-perspective:    $value;
+    -moz-perspective:   $value;
+    -ms-perspective:    $value;
+    perspective:        $value;
+}
+@mixin transform-origin ($x:center, $y:center) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin:    $x $y;
+    -ms-transform-origin:     $x $y;
+    -o-transform-origin:      $x $y;
+}

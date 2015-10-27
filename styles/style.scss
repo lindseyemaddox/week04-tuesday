@@ -1,0 +1,89 @@
+@import 'common_resetCss'; 
+@import 'mixins';
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+// $visual-grid:true;
+@import 'bower_components/neat/app/assets/stylesheets/neat';
+
+$primary: 	#68b25b;
+$secondary:	#85c07b;
+$black:		#496a44;
+$white:		#ffffff;
+
+html {
+  font-size: 14px;
+}
+body {
+	@include openSans();
+  	font-size: 1rem;
+  	text-align: center;
+	@include outer-container(12);
+	margin: 0 auto;
+	width: 960px;
+}
+
+div#calculator {
+	margin-top: 80px;
+	@include shift(4);
+	@include span-columns(4 of 12);
+	cursor: pointer;
+	background-color: $primary;
+	color: $white;
+	div.top {
+		@include span-columns(4 of 4);
+		@include omega();
+		button.clear {
+			@include span-columns(1 of 4);
+			@include border();
+			width: 25%;
+			margin-right: 0;
+			padding: 24px 0;
+			background-color: $primary;
+			color: $white;
+			&:hover {
+				background-color: $secondary;
+				@include transition();
+			}
+		}
+		input.answer {
+			@include span-columns(3 of 4);
+			@include omega();
+			@include border();
+			text-align: right;
+			padding-right: 24px;
+			padding: 24px 24px 24px 0;
+			width: 75%;
+			height: 65px;
+			background-color: $primary;
+			color: $white;
+		}
+	}
+	div.keys {
+		@include span-columns(4 of 4);
+		button {
+			@include span-columns(1 of 4);
+			@include border();
+			padding: 24px 0;
+			width: 25%;
+			margin-right: 0;
+			background-color: $primary;
+			color: $white;
+			&:nth-child(4n) {
+				@include omega();
+				background-color: $secondary;
+				color: $black;
+					&:hover {
+					color: $white;
+					@include transition();
+				}
+			}
+			&.eval {
+				&:hover {
+					background-color: $secondary;
+					@include transition();
+				}				
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "styles",
+  "homepage": "https://github.com/lindseyemaddox/week04-tuesday",
+  "authors": [
+    "lindseyemaddox <lindseyemaddox@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "neat": "~1.7.2"
+  }
+}
