@@ -12,8 +12,7 @@ $(document).ready(function(){
 	  	login.html(data.login),
 	  	name.html(data.name),
 	  	location.html(data.location),
-	  	created.html(data.created)
-
+	  	created.html(moment(data.created_at).format('ll'))
 
 
 
