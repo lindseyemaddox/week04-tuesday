@@ -21,6 +21,7 @@ body {
 	width: 980px;
 	box-sizing: border-box;
 	color: $black;
+	font-family: 'helvetica', sans-serif;
 }
 
 h1 {
@@ -122,7 +123,8 @@ main {
 				color: $secondary;
 			}
 			&.description {
-				color: $black;
+				color: $secondary;
+				font-size: 14px;
 			}
 		}
 	}

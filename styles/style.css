@@ -929,7 +929,8 @@ body {
   margin: 0 auto;
   width: 980px;
   box-sizing: border-box;
-  color: #333333; }
+  color: #333333;
+  font-family: 'helvetica', sans-serif; }
 
 h1 {
   font-size: 26px;
@@ -1039,7 +1040,8 @@ main {
       main div.left p.updated {
         color: #888888; }
       main div.left p.description {
-        color: #333333; }
+        color: #888888;
+        font-size: 14px; }
   main div.right {
     float: left;
     display: block;
