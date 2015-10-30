@@ -935,10 +935,14 @@ h1 {
   font-size: 26px;
   line-height: 30px;
   font-weight: bold; }
+  h1 a {
+    color: #333333; }
 
 h2 {
   font-size: 20px;
   line-height: 24px; }
+  h2 a {
+    color: #333333; }
 
 h3 {
   font-size: 14px;
@@ -950,6 +954,9 @@ h3 {
 h4 {
   font-size: 16px;
   font-weight: bold; }
+
+a {
+  text-decoration: none; }
 
 hr {
   margin: 15px 0;
@@ -1049,5 +1056,3 @@ main {
         color: #4078c0; }
   main i {
     padding-left: 14px; }
-  main a {
-    text-decoration: none; }
