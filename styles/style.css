@@ -945,7 +945,6 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  text-align: center;
   margin: 0 auto;
   width: 980px; }
 
@@ -986,3 +985,20 @@ main {
   margin-right: 0; }
   main:last-child {
     margin-right: 0; }
+  main > div {
+    padding: 33px 0; }
+  main div.left {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 77.07368%; }
+    main div.left:last-child {
+      margin-right: 0; }
+  main div.right {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 19.75788%;
+    margin-right: 0; }
+    main div.right:last-child {
+      margin-right: 0; }

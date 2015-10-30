@@ -29,17 +29,17 @@ $(document).ready(function(){
 
 	$.getJSON('https://api.github.com/users/lindseyemaddox/repos').done(function(data) {
 
+		var updated = moment(data.updated_at).toNow(true);
 		var arr = data;
-
 		var textToInsert = [];
 		var i = 0;
 		var length = arr.length;
 		for (var a = 0; a < length; a += 1) {
-		    textToInsert[i++]  = '<div class="repo">';
-		    textToInsert[i++] = JSON.stringify(arr[a]);
+		    textToInsert[i++] = '<div class="repo">';
+		    textToInsert[i++] = '<div class="left"><p>' + arr[a].name + '</p>' + '<p>Updated ' + updated + ' ago</p></div><div class="right"><i class="octicon octicon-star">' + arr[a].stargazers_count + '</i>' + '<i class="octicon octicon-git-branch">' + arr[a].forks_count + '</i></div>';
 		    textToInsert[i++] = '</div>' ;
-		 
 		}
+
 		$('main').append(textToInsert.join(''));
 
 
