@@ -3,12 +3,12 @@
 @import 'mixins';
 @import 'octicons';
 @import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
-$visual-grid:true;
+// $visual-grid:true;
 @import 'bower_components/neat/app/assets/stylesheets/neat';
 
-$primary: 	#68b25b;
-$secondary:	#85c07b;
-$black:		#496a44;
+$primary: 	#4078c0;
+$secondary:	#888888;
+$black:		#333333;
 $white:		#ffffff;
 
 html {
@@ -19,6 +19,37 @@ body {
   	font-size: 1rem;
 	margin: 0 auto;
 	width: 980px;
+	box-sizing: border-box;
+	color: $black;
+}
+
+h1 {
+	font-size: 26px;
+	line-height: 30px;
+	font-weight: bold;
+}
+h2 {
+	font-size: 20px;
+	line-height: 24px;
+}
+h3 {
+	font-size: 14px;
+	line-height: 20px;
+	span.octicon {
+		color: $secondary;
+		padding-right: 5px;
+	}
+}
+h4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+hr {
+	margin: 15px 0;
+	height: 1px;
+	border: none;
+	background-color: #ccc;
 }
 
 #outer {
@@ -32,8 +63,28 @@ header {
 aside {
 	margin-top: 80px;
 	@include span-columns(3 of 12);
+	color: $black;
 	img {
 		width: 100%;
+		border-radius: 5px;
+		margin-bottom: 5px;
+	}
+	div.follow {
+		> div {
+			width: 32%;
+			display: inline-block;
+		}
+		p {
+			color: $secondary;
+			text-align: center;
+			font-size: 11px;
+			span {
+				color: $primary;
+				font-size: 28px;
+				font-weight: bold;
+				display: block;
+			}
+		}
 	}
 }
 
@@ -41,14 +92,44 @@ main {
 	margin-top: 80px;
 	@include span-columns(9 of 12);
 	@include omega();
-	> div {
+	div.repo {
 		padding: 33px 0;
+		border-bottom: 1px solid $secondary;
 	}
 	div.left {
 		@include span-columns(7 of 9);
+		a {
+			color: $primary;
+			display: block;
+			padding-bottom: 10px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		p {
+			color: $primary;
+			font-size: 13px;
+			&.updated {
+				color: $secondary;
+			}
+		}
 	}
 	div.right {
 		@include span-columns(2 of 9);
 		@include omega();
+		color: $secondary;
+		text-align: right;
+		a {
+			color: $secondary;
+			@include transition;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	i {
+		padding-left: 14px;
+	}
+	a {
+		text-decoration: none;
 	}
 }
