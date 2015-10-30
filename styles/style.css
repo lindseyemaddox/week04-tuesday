@@ -1034,9 +1034,12 @@ main {
       font-size: 20px; }
     main div.left p {
       color: #4078c0;
-      font-size: 13px; }
+      font-size: 13px;
+      line-height: 20px; }
       main div.left p.updated {
         color: #888888; }
+      main div.left p.description {
+        color: #333333; }
   main div.right {
     float: left;
     display: block;

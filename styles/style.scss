@@ -117,8 +117,12 @@ main {
 		p {
 			color: $primary;
 			font-size: 13px;
+			line-height: 20px;
 			&.updated {
 				color: $secondary;
+			}
+			&.description {
+				color: $black;
 			}
 		}
 	}
